@@ -1,0 +1,10 @@
+Task 1: Print our your name using the letter "O" in ASCII art.
+
+System.out.println("O     O     O       O O  O      O");
+System.out.println("O  O  O  O     O  O         O O
+System.out.println("O     O  O O O O  O          O
+System.out.println("O     O  O     O  O          O
+System.out.println("O     O  O     O    O O      O 
+
+Task 2: Write code to compute the following math problem
+System.out.print((6.0*3.5)-(1.5*5)/(55.6-30.2));
