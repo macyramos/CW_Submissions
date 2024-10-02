@@ -35,3 +35,12 @@ public String makeTags(String tag, String word) {
 }
 
 //Task 4:First Half
+  //Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+  //firstHalf("WooHoo") → "Woo"
+  //firstHalf("HelloThere") → "Hello"
+  //firstHalf("abcdef") → "abc"
+
+public String firstHalf(String str) {
+  String firstHalf  =  new String (str.substring(0,(int)(0.5*str.length())));
+  return firstHalf;
+}
