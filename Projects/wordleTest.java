@@ -12,6 +12,13 @@ public class wordleTest {
 		//determine what the answer should be, coder gets to decide this LOWERCASE ONLY
 		String soln = new String ("ghost");
 		
+		
+/This is where I introduce the basic instructions to play Wordle.
+
+/
+
+		
+		
 		System.out.println("Welcome to Wordle! ");
 		System.out.println("If you type in a word that is not 5 letters, you will recieve a blank space.");
 		System.out.println("If that does happen, please restart the game.");
