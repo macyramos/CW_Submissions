@@ -1,3 +1,6 @@
+@author Macy Ramos
+
+	
 import java.util.Scanner;
 public class wordleTest {
 
@@ -20,21 +23,12 @@ public class wordleTest {
 		gameReader.close();
 	}
 
-	/**
-	 * You decide how to comment this!
-	 * 
-	 * @param soln is the right answer
-	 */
 	private static void playGame(String soln) {
 		
 		//prompt and allow user to give an input, set a String equal to it (it is the guess)
 		System.out.println("Make a guess (lowercase please): ");
-		String playerGuess = new String (checkLength1(gameReader.next()));
+		String playerGuess = new String (checkLength(gameReader.next()));
 		String display = "";
-	
-
-	
-		String checkLength = "You can only have up to 5 letters, please try again";
 		
 		char firstLetter = playerGuess.charAt(0);
 		char secondLetter = playerGuess.charAt(1);
@@ -43,40 +37,23 @@ public class wordleTest {
 		char fifthLetter = playerGuess.charAt(4);
 		
 		display = display + firstLetter(firstLetter, soln);
-		System.out.println(display);
 		
 		display = display + secondLetter(secondLetter, soln);
-		System.out.println(display);
 		
 		display = display + thirdLetter(thirdLetter, soln);
-		System.out.println(display);
 		
 		display = display + fourthLetter(fourthLetter, soln);
-		System.out.println(display);
 		
 		display = display + fifthLetter(fifthLetter, soln);
 		System.out.println(display);
 		
-		/*
-		String firstLetter = firstLetter();
-		String secondLetter  = secondLetter();
-		String thirdLetter  = thirdLetter();
-		String fourthLetter = fourthLetter();
-		String fifthLetter = fourthLetter();
-		*/
-		
-	
-		
-		
-		
-		if (playerGuess != soln)
+		if (!(playerGuess.equals(display)))
 		{
 			playGame(soln);
 		}
 		else  /* if you are here, that means the user guessed it correctly */
 		{
 			//print out success message
-			
 			System.out.println("Congrats! You successfully guessed that the word was " + soln + ".");
 		}
 		
@@ -84,41 +61,35 @@ public class wordleTest {
 
 
 
-	private static String checkLength1 (String input) {
+	private static String checkLength (String input) 
+	{
 		if (input.length() !=  5)
 		{
-			return checkLength1(gameReader.next());
+			System.out.println("That word is not 5 letters. Please type again");
+			return checkLength(gameReader.next());
 		}
 		else
 		{
-			return input;
+			return checkReps(input);
 		}
 	
 	}
 	
-	private static String checkLength(String input) {
+	private static String checkReps (String input) {
 		char firstLetter = input.charAt(0);
 		char secondLetter = input.charAt(1);
 		char thirdLetter = input.charAt(2);
 		char fourthLetter = input.charAt(3);
 		char fifthLetter = input.charAt(4);
-		char repeatingLetter = 'a';
-	
 		
-		if(firstLetter == secondLetter || firstLetter == thirdLetter ||  firstLetter == fourthLetter  || firstLetter == fifthLetter||
+		if (firstLetter == secondLetter || firstLetter == thirdLetter ||  firstLetter == fourthLetter  || firstLetter == fifthLetter||
 		   secondLetter == thirdLetter || secondLetter == fourthLetter || secondLetter == fifthLetter||
 		   thirdLetter == fourthLetter || thirdLetter == fifthLetter || 
 		   fourthLetter == fifthLetter)
-			
-		
-		if(repeatingLetter == 5) 
-			{
-				return "";
-			}
-		if(repeatingLetter != 5)
-			{
-				return "You have repeating letters in your word, please try again.";
-			}
+		{
+			System.out.println("There are repeating letters in this word. Please input again");
+			return checkLength(gameReader.nextLine());
+		}
 		return input;
 	}
 	
