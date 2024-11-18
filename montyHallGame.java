@@ -27,13 +27,16 @@ static Scanner myReader =new Scanner (System.in);
 		System.out.println("You chose Door " + selectDoor);
 		System.out.println("The  winning door was Door " + correctDoor);
 		
+//Here I closed my scanner.
+		
 		myReader.close();	
 	}
 	
 	
 	
 /**This is where I wrote  my first method, which declares which one is the right door.		
- * @return
+ * In here, I wrote a random number generator to pick which door would be considered right and I also did the same for picking a door at random.
+ *@return
  */
 	private static int showRightDoor() 
 	{
@@ -49,7 +52,7 @@ static Scanner myReader =new Scanner (System.in);
 	}
 	
 	
-/**This is where I wrote my  second  method, this one  declares  which door the person playing had  selected.	
+/**This is where I wrote my  second  method, this one declares which door the person playing had selected.	
  * @return
  */
 	private static int selectDoor()
