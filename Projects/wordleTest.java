@@ -13,9 +13,8 @@ public class wordleTest {
 		String soln = new String ("ghost");
 		
 		
-/This is where I introduce the basic instructions to play Wordle.
+//This is where I introduce the basic instructions to play Wordle.
 
-/
 
 		
 		
