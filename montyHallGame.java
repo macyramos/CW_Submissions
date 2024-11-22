@@ -86,7 +86,7 @@ static Scanner myReader =new Scanner (System.in);
 		
 
 	
-/** We  will be revealing which door was wrong
+/** This reveals which door was wrong
  * 
  * @param winDoor
  * @param selectDoor
