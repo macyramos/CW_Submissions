@@ -126,27 +126,27 @@ static Scanner myReader =new Scanner (System.in);
 			{
 				if (showRightDoor == winDoor)
 				{
-					System.out.println( "You won! :)");
+					System.out.println( "You won!");
 				}
 				else 
 				{
-					System.out.println("You lost! :(");
+					System.out.println("You lost!");
 				}
 			}
 			else if (input.equals("no"))
 			{
 				if (selectDoor == winDoor)
 				{
-					System.out.println ("You won! :)");
+					System.out.println ("You won!");
 				}
 				else 
 				{
-					System.out.println("You lost! :(");
+					System.out.println("You lost!");
 				}
 			}
 			else
 			{
-				System.out.println("Please select a door that's available.");
+				System.out.println("Please select a door from the choices available.");
 				correctDoor(winDoor, selectDoor, showRightDoor);
 			}
 		}
