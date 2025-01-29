@@ -6,7 +6,10 @@
 */The array will be length 1 or more
 
 public boolean firstLast6(int[] nums) {
- if(nums.length >= 1)
+//This method checks if the length is more than or equal to 1, and if it is, then it checks if the first number is equal to 6 or if the last number is equal to 6
+//If at least one of them do, it will return true. If it is not, it will return false.
+
+if(nums.length >= 1)
  {
    if (nums [0] == 6 || nums [nums.length-1] ==6)
     {
@@ -21,6 +24,8 @@ public boolean firstLast6(int[] nums) {
 */and the first element and the last element are equal.
 
 public boolean sameFirstLast(int[] nums) {
+//This method checks if the length of the array of ints is more than or equal to 1, if it is, then it goes on to check if the first digit is the same as the last digit
+//(checking if theyre the same spot), if it is, then it returns true. If not, it returns false.
   if (nums.length >=1)
   {
       if(nums [0] == nums [nums.length-1])
@@ -34,17 +39,25 @@ public boolean sameFirstLast(int[] nums) {
 /**Task 3: Make Pi
 *Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}
 */
+
 public int[] makePi() {
+//This method returns an array length of 3 that contains the first 3 digits of pi, it does this by instantiating the numbers of pi, then it returns pi
+
   int [] Pi = {3, 1, 4};
   return Pi;
 }
 
 /**Task 4: Common End
-*Given 2 arrays of ints, a and b, return true if they have the same first element or they haevt he same last element. 
+*Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. 
 */Both arrays will be length 1 or more.
 
 public boolean commonEnd(int[] a, int[] b) {
-  if(a.length >= 1 && b.length >= 1)
+//This method is given 2 arrays of ints, a and b, and it returns true if they both have the same first element or the same last element
+//The if statement checks to compare the length of a with the length of be and it checks to see if its equal or more
+//Then another if statement checks if the first digits of a and b and the last digits of a and b are matching, then it returns true
+//If not, it returns false
+
+if(a.length >= 1 && b.length >= 1)
   {
     if (a [0] == b[0] || a[a.length-1] == b[b.length-1])
       {
