@@ -72,7 +72,9 @@ if(a.length >= 1 && b.length >= 1)
 */
 
 public int sum3(int[] nums) {
-  return nums [0] + nums [1] + nums [2];
+//This method gathers the sum of all the 3 elements by simply adding them together
+
+return nums [0] + nums [1] + nums [2];
 }
 
 
