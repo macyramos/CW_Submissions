@@ -6,7 +6,7 @@ public class AdoptionMain {
 	}
 
 	public static void main(String[] args) {
-	//this creates the objects with its  	
+	//this creates the objects with different attributes	
 		Dog hippie = new Dog(13, "Hippie", false);
 		PuppyDog yippee = new PuppyDog(6, "Yippee", false, true);
 		
@@ -22,10 +22,11 @@ public class AdoptionMain {
 		System.out.println(hippie);
 		System.out.println(yippee);
 		
-	//making a dog and a puppy dog	
+	//making a dog and a puppy dog with the same name
 		Dog max = new Dog(3, "Max", true);
 		PuppyDog max2 = new PuppyDog(36, "Max", true, false);
-		
+
+	//this compares the two objects	
 		System.out.println(max.equals(max2));
 
 		
